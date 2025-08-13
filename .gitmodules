@@ -1,0 +1,3 @@
+[submodule "ClearSoundAI"]
+	path = ClearSoundAI
+	url = https://github.com/airesumewriter/ClearSoundAI.git
