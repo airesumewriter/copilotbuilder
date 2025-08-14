@@ -6,6 +6,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      environment:
+        description: Deploy environment
+        required: true
+        default: staging
 
 jobs:
   build:
@@ -24,4 +29,16 @@ jobs:
 
       - name: Run tests
         run: npm test || echo "No tests yet"
+
+  deploy:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        run: |
+          echo "Deploying to ${{ github.event.inputs.environment }}"
+          ./scripts/deploy.sh ${{ github.event.inputs.environment }}
 
