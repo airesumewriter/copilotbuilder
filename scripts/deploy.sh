@@ -26,23 +26,8 @@ case "$ENVIRONMENT" in
 esac
 
 echo "🚀 Starting deployment to $ENVIRONMENT"
-echo "🌐 Target URL: $TARGET_URL"
+echo "🔗 Target URL: $TARGET_URL"
 
-# Check for dry run mode
-if [[ "$DRY_RUN" == "true" ]]; then
-  echo "[DRY RUN] Would deploy to $TARGET_URL using key $DEPLOY_KEY"
-  exit 0
-fi
-
-# Validate deploy key
-if [[ ! -f "$DEPLOY_KEY" ]]; then
-  echo "❌ Deploy key not found: $DEPLOY_KEY"
-  exit 1
-fi
-
-# Simulate deployment (replace with real logic)
-echo "🔐 Using deploy key: $DEPLOY_KEY"
-echo "📦 Deploying files..."
-sleep 2  # Simulate work
-echo "✅ Deployment to $ENVIRONMENT complete"
+# Placeholder for actual deployment logic
+# e.g., rsync, curl, git push, etc.
 

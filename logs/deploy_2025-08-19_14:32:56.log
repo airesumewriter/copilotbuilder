@@ -1,0 +1,3 @@
+🚀 Starting deployment to staging
+/data/data/com.termux/files/home/copilotbuilder/scripts/deploy.sh: line 29: syntax error near unexpected token `<<<'
+/data/data/com.termux/files/home/copilotbuilder/scripts/deploy.sh: line 29: `<<<<<<< HEAD'
