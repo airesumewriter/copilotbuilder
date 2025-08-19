@@ -1,3 +1,4 @@
+# Shell and user config
 .bash_history
 .bashrc
 .profile
@@ -5,3 +6,6 @@
 .config/
 .ollama/
 .launchpadlib/
+
+# Node modules
+node_modules/
